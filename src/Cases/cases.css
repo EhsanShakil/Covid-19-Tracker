@@ -1,3 +1,6 @@
+body {
+  background-color: #18191a;
+}
 .container {
   display: flex;
   justify-content: space-evenly;
@@ -5,6 +8,7 @@
   flex-wrap: wrap;
   font-size: large;
 }
+
 @media only screen and (max-width: 1000px) {
   .container {
     display: flex;
@@ -22,29 +26,35 @@
   }
 }
 .confirmedcases {
-  border: 2px solid black;
+  border: 2px solid #4e4f50;
   border-radius: 40px;
   width: 300px;
   transition: 1s;
+  background-color: #4e4f50;
+  color: #dbdde1;
 }
 .confirmedcases:hover {
   transform: scale(1.03);
 }
 
 .recoverededcases {
-  border: 2px solid black;
+  border: 2px solid #4e4f50;
   width: 300px;
   border-radius: 40px;
   transition: 1s;
+  background-color: #4e4f50;
+  color: #dbdde1;
 }
 .recoverededcases:hover {
   transform: scale(1.03);
 }
 .deaths {
-  border: 2px solid black;
+  border: 2px solid #4e4f50;
   border-radius: 40px;
   width: 300px;
   transition: 1s;
+  background-color: #4e4f50;
+  color: #dbdde1;
 }
 .deaths:hover {
   transform: scale(1.03);

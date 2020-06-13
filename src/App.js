@@ -1,6 +1,7 @@
 import React from "react";
 import { fetchData } from "./api/api";
 import Data from "./Cases";
+import Chart from "./Charts/Charts";
 
 class App extends React.Component {
   state = {
@@ -17,6 +18,7 @@ class App extends React.Component {
       <div>
         <h1>Covid-19-Tracker</h1>
         <Data data={this.state.data} />
+        <Chart />
       </div>
     );
   }
