@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello World</h1>
+        <h1>Covid-19-Tracker</h1>
         <Data data={this.state.data} />
       </div>
     );
