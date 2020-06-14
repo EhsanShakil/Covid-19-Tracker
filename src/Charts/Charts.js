@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { fetchDailyData } from "../api/api";
-import { Line } from "react-chartjs-2";
+import { Line, Bar } from "react-chartjs-2";
 import Trend from "react-trend";
 
-const Chart = ({ data, country }) => {
+const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState([]);
 
   useEffect(() => {
@@ -35,25 +35,26 @@ const Chart = ({ data, country }) => {
       }}
     />
   ) : null;
+  const barChart = confirmed ? (
+    <Bar
+      data={{
+        labels: ["Infected", "Recovered", "Deaths"],
+        datasets: [
+          {
+            label: "People",
+            backgroundColor: ["blue", "green", "red"],
+            data: [confirmed.value, recovered.value, deaths.value],
+          },
+        ],
+      }}
+      options={{
+        legend: { display: false },
+        title: { display: true, text: `Current State In ${country}` },
+      }}
+    />
+  ) : null;
 
-  return (
-    <div>
-      {lineChart}
-      <Trend
-        smooth
-        autoDraw
-        autoDrawDuration={10000}
-        autoDrawEasing="ease-out"
-        data={[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]}
-        data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]}
-        gradient={["#00c6ff", "#F0F", "#FF0"]}
-        radius={25}
-        strokeWidth={3.5}
-        strokeLinecap={"round"}
-      />
-      ;
-    </div>
-  );
+  return <div>{country ? barChart : lineChart}</div>;
 };
 
 export default Chart;

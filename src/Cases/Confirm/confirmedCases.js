@@ -8,7 +8,7 @@ const ConfirmedCases = ({ data: { confirmed, lastUpdate } }) => {
   }
   return (
     <div className="confirmedcases">
-      <h1>Confirmed</h1>
+      <h1>Infected</h1>
       <h2>
         <CountUp
           start={0}
