@@ -6,6 +6,7 @@ const ConfirmedCases = ({ data: { confirmed, lastUpdate } }) => {
   if (!confirmed) {
     return "Loading...";
   }
+  console.log({ confirmed });
   return (
     <div className="confirmedcases">
       <h1>Infected</h1>

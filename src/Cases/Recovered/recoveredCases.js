@@ -2,7 +2,7 @@ import React from "react";
 import "../cases.css";
 import CountUp from "react-countup";
 
-const RecoveredCases = ({ data: { recovered, lastUpdate } }) => {
+const RecoveredCases = ({ data: { recovered, lastUpdate }, country }) => {
   if (!recovered) {
     return "Loading...";
   }
