@@ -2,7 +2,7 @@ import React from "react";
 import "../cases.css";
 import CountUp from "react-countup";
 
-const RecoveredCases = ({ data: { recovered } }) => {
+const RecoveredCases = ({ data: { recovered, lastUpdate } }) => {
   if (!recovered) {
     return "Loading...";
   }
@@ -17,6 +17,9 @@ const RecoveredCases = ({ data: { recovered } }) => {
           separator=","
         />
       </h2>
+      <h3 style={{ backgroundColor: "green" }}>
+        {new Date(lastUpdate).toDateString()}
+      </h3>
     </div>
   );
 };

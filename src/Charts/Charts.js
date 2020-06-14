@@ -3,7 +3,7 @@ import { fetchDailyData } from "../api/api";
 import { Line } from "react-chartjs-2";
 import Trend from "react-trend";
 
-const Chart = () => {
+const Chart = ({ data, country }) => {
   const [dailyData, setDailyData] = useState([]);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const Chart = () => {
       <Trend
         smooth
         autoDraw
-        autoDrawDuration={3000}
+        autoDrawDuration={10000}
         autoDrawEasing="ease-out"
         data={[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]}
         data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]}

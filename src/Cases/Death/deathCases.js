@@ -2,7 +2,7 @@ import React from "react";
 import "../cases.css";
 import CountUp from "react-countup";
 
-const DeathCases = ({ data: { deaths } }) => {
+const DeathCases = ({ data: { deaths, lastUpdate } }) => {
   if (!deaths) {
     return "Loading...";
   }
@@ -12,6 +12,9 @@ const DeathCases = ({ data: { deaths } }) => {
       <h2>
         <CountUp start={0} end={deaths.value} duration={2.75} separator="," />
       </h2>
+      <h3 style={{ backgroundColor: "red" }}>
+        {new Date(lastUpdate).toDateString()}
+      </h3>
     </div>
   );
 };
