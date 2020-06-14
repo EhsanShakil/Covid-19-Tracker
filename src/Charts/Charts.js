@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchDailyData } from "../api/api";
 import { Line, Bar } from "react-chartjs-2";
-import Trend from "react-trend";
 
 const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState([]);
