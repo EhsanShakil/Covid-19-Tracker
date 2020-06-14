@@ -20,6 +20,7 @@ const RecoveredCases = ({ data: { recovered, lastUpdate } }) => {
       <h3 style={{ backgroundColor: "green" }}>
         {new Date(lastUpdate).toDateString()}
       </h3>
+      <h3>Number of Recoveries</h3>
     </div>
   );
 };

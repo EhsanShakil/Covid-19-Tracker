@@ -20,6 +20,7 @@ const ConfirmedCases = ({ data: { confirmed, lastUpdate } }) => {
       <h3 style={{ backgroundColor: "blue" }}>
         {new Date(lastUpdate).toDateString()}
       </h3>
+      <h3>Number of Active Cases</h3>
     </div>
   );
 };

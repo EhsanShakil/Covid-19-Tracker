@@ -23,10 +23,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Covid-19-Tracker</h1>
+        <h1 style={{ color: "#dbdde1", textAlign: "center" }}>
+          Covid-19-Tracker
+        </h1>
         <Data data={this.state.data} />
-        <Chart data={this.state.data} country={this.state.country} />
         <Countries countryChange={this.handleCountryChange} />
+        <Chart data={this.state.data} country={this.state.country} />
       </div>
     );
   }

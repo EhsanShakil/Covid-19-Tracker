@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchCountries } from "../api/api";
+import "./countryPicker.css";
 
 const Countries = ({ countryChange }) => {
   const [country, setCountry] = useState([]);
@@ -13,9 +14,9 @@ const Countries = ({ countryChange }) => {
 
   console.log(country);
   return (
-    <div>
+    <div className="countrypicker">
       <form onChange={(e) => countryChange(e.target.value)}>
-        <select>
+        <select className="select">
           <option>Global</option>
           {country.map((country, index) => (
             <option key={index}>{country}</option>

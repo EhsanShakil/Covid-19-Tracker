@@ -15,6 +15,7 @@ const DeathCases = ({ data: { deaths, lastUpdate } }) => {
       <h3 style={{ backgroundColor: "red" }}>
         {new Date(lastUpdate).toDateString()}
       </h3>
+      <h3>Number of Deaths</h3>
     </div>
   );
 };
