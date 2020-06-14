@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1 style={{ color: "#dbdde1", textAlign: "center" }}>
+        <h1 style={{ color: "#dbdde1", textAlign: "center", fontSize: "50px" }}>
           Covid-19-Tracker
         </h1>
         <Data data={this.state.data} />
