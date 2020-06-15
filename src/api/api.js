@@ -8,7 +8,6 @@ export const fetchData = async (country) => {
   if (country) {
     changeableurl = `${url}/countries/${country}`;
   }
-
   try {
     const {
       data: { confirmed, recovered, deaths, lastUpdate },

@@ -12,14 +12,15 @@ const Countries = ({ countryChange }) => {
     fetchCountry();
   }, []);
 
-  console.log(country);
   return (
     <div className="countrypicker">
       <form onChange={(e) => countryChange(e.target.value)}>
         <select className="select">
-          <option>Global</option>
+          <option value="">Global</option>
           {country.map((country, index) => (
-            <option key={index}>{country}</option>
+            <option key={index} value={country}>
+              {country}
+            </option>
           ))}
         </select>
       </form>
